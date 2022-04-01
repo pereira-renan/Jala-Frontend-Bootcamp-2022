@@ -8,5 +8,9 @@
     "dev": "node index.js"
   },
   "author": "mateus-vianna-jalasoft",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "prettier": "^2.6.1"
+  }
 }
