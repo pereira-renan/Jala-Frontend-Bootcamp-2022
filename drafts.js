@@ -29,9 +29,9 @@ var wallet = {
   color: 'black',
   isEmpty: true,
   balance: 0,
-  putCash: function (value) {
-    this.balance += value;
-    this.isEmpty = false;
+  putCash: (value) => {
+    wallet.balance += value;
+    wallet.isEmpty = false;
     console.info('We got money');
   },
 };
@@ -70,3 +70,10 @@ console.log(
   'Backpack pocket number bracket notation:',
   backpack['strapLength'].left
 );
+
+backpack.novo = 32;
+
+console.log('Novo:', backpack);
+
+wallet.putCash(12);
+console.log(wallet.balance);
