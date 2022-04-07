@@ -4,11 +4,11 @@
 
 ## What do I need to start working on it?
 
-**1) Visual code**
-**2) Git**
-**3) Eslint plugin (VScode)**
-**4) Prettier plugin (VScode)**
-**5) Live Server plugin (VScode)**
+**1) Visual code**</br/>
+**2) Git**</br/>
+**3) Eslint plugin (VScode)**</br/>
+**4) Prettier plugin (VScode)**</br/>
+**5) Live Server plugin (VScode)**</br/>
 
 ## How to run this code?
 
@@ -31,3 +31,17 @@
 **4) Using VScode you just need to press the "Go Live" button on the bottom right. A browser window will open, showing everything on your project's root folder.**
 
 ###### if you click on **example 1** or **example 2** all javascript, css and html will be run
+
+## About the projects
+
+---
+
+## Commands we've seen
+
+document.querySelectorAll("html_tag_name || css_class_with_dot")
+document.querySelector("html_tag_name || css_class_with_dot")
+
+###### How dinossaurs used to do
+
+document.getElementByClassName('css_class_with_out_dot')
+document.getElementById('css_class_with_out_dot')

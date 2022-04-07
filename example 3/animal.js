@@ -8,7 +8,8 @@ class Animal {
     weight,
     age,
     bornDate,
-    foodType
+    foodType,
+    image
   ) {
     this.species = species;
     this.name = name;
@@ -19,6 +20,7 @@ class Animal {
     this.age = age;
     this.bornDate = bornDate;
     this.foodType = foodType;
+    this.image = image;
   }
 
   distanceRan() {
