@@ -4,11 +4,11 @@
 
 ## What do I need to start working on it?
 
-**1) Visual code** </br/>
-**2) Git** </br/>
-**3) Eslint plugin (VScode)** </br/>
-**4) Prettier plugin (VScode)** </br/>
-**5) Live Server plugin (VScode)** </br/>
+**1) Visual code** </br />
+**2) Git** </br />
+**3) Eslint plugin (VScode)** </br />
+**4) Prettier plugin (VScode)** </br />
+**5) Live Server plugin (VScode)** </br />
 
 ## How to run this code?
 
