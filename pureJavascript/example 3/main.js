@@ -39,10 +39,6 @@ const template = (monkey) => {
   `;
 };
 
-template
-  .querySelector('p')
-  .forEach((item) => (item.style.backgroundColor = 'yellow'));
-
 console.log(monkey);
 
 main.innerHTML = template(monkey);

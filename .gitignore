@@ -1,3 +1,28 @@
 .vscode
-package-lock.json
-node_modules
+pureJavascript/package-lock.json
+pureJavascript/node_modules/*
+
+
+# react 
+
+# dependencies
+shop/node_modules/*
+shop/.pnp
+shop.pnp.js
+
+# testing
+shop/coverage
+
+# production
+shop/build
+
+# misc
+shop/.DS_Store
+shop/.env.local
+shop/.env.development.local
+shop/.env.test.local
+shop/.env.production.local
+
+shop/npm-debug.log*
+shop/yarn-debug.log*
+shop/yarn-error.log*
