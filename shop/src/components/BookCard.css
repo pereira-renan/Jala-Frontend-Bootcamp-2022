@@ -1,0 +1,40 @@
+.bookCard__container {
+  width: 160px;
+  height: fit-content;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.bookCard_thumbnail__container {
+  width: 160px;
+  height: 200px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.bookCard_thumbnail__image {
+  width: 160px;
+  border-radius: 4px;
+}
+.bookCard_data__container {
+  width: 160px;
+  height: 80px;
+  padding-top: 10px;
+}
+.bookCard_title__text {
+  font-size: 0.9rem;
+  font-weight: thin;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75ch;
+}
+
+.bookCard_author__text {
+  font-size: 0.8rem;
+  font-weight: thin;
+  color: gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75ch;
+}
