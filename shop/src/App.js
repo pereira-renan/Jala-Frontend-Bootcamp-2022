@@ -1,10 +1,10 @@
-import "./App.css";
-import Main from "./components/main";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import "./App.css"
+import Footer from "./layout/footer"
+import Header from "./layout/header"
+import Main from "./layout/main"
 
 function App() {
-  const show = false;
+  const show = false
 
   return (
     <>
@@ -12,7 +12,7 @@ function App() {
       <Main show={show} />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

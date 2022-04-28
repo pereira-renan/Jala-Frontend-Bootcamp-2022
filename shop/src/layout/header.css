@@ -1,0 +1,14 @@
+nav {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+ul,
+li,
+a {
+  color: white;
+}

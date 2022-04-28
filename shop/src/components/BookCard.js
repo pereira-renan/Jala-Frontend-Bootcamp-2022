@@ -1,10 +1,20 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import "./BookCard.css"
+import { BookContext } from "../BookContext"
+import { useNavigate } from "react-router-dom"
 
 export default function BookCard({ book }) {
+  const { setSelected } = useContext(BookContext)
+  const navigate = useNavigate()
   return (
     <>
-      <div className="bookCard__container">
+      <div
+        className="bookCard__container"
+        onClick={() => {
+          setSelected(book)
+          navigate(`/books/${book.id}`)
+        }}
+      >
         <div className="bookCard_thumbnail__container">
           <img
             className="bookCard_thumbnail__image"
