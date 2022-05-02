@@ -3,7 +3,14 @@
   height: fit-content;
   justify-content: space-between;
   cursor: pointer;
+  transition: 500ms;
+  border-radius: 5px;
 }
+
+.bookCard__container:hover {
+  background-color: rgb(199, 199, 199);
+}
+
 .bookCard_thumbnail__container {
   width: 160px;
   height: 200px;
@@ -37,4 +44,39 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 75ch;
+}
+.bookCard__buttons {
+  width: 160px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bookCard {
+  margin-top: 20px;
+}
+
+.bookCard_select__buttons {
+  background-color: rgb(167, 251, 199);
+  width: 50%;
+  transition: 500ms;
+}
+
+.bookCard_select__buttons:hover {
+  background-color: rgb(26, 86, 49);
+}
+
+.bookCard_add__buttons {
+  background-color: rgb(249, 255, 74);
+  width: 50%;
+  transition: 500ms;
+}
+
+.bookCard_add__buttons:hover {
+  background-color: rgb(142, 146, 28);
 }

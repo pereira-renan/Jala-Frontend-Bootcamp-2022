@@ -1,14 +1,27 @@
 import React from "react"
+import { useDispatch } from "react-redux"
+import { addProduct } from "../redux/reducer/shopReducer"
 import "./BookCard.css"
 
 export default function BookCard({ book }) {
+  const dispatch = useDispatch()
   return (
     <>
       <div>
         <h1>Your Selected Book</h1>
       </div>
+
       <div className="bookDiv">
         <div className="bookShowcase">
+          <div className="bookCard__buttons">
+            <div
+              className="bookCard_add__buttons"
+              style={{ width: "100%" }}
+              onClick={() => dispatch(addProduct(book))}
+            >
+              Add to cart
+            </div>
+          </div>
           <div className="bookCard__container">
             <div className="bookCard_thumbnail__container">
               <img

@@ -1,4 +1,7 @@
 import React from "react"
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { selectProduct } from "../redux/reducer/showcaseReducer"
 import "./BookCard.css"
 
 export default function BestSeller() {
@@ -77,12 +80,22 @@ export default function BestSeller() {
         "An epic depicting the Great War of the Ring, a struggle between good and evil in Middle-Earth, in which the tiny Hobbits play a key role.",
     },
   }
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
   return (
     <>
       <div>
         <h1>Best Seller</h1>
       </div>
-      <div className="bookDiv">
+      <div
+        className="bookDiv"
+        onClick={() => {
+          dispatch(selectProduct(book))
+          navigate(`/books/${book.id}`)
+        }}
+      >
         <div className="bookShowcase">
           <div className="bookCard__container">
             <div className="bookCard_thumbnail__container">

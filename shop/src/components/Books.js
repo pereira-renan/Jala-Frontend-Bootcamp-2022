@@ -1,8 +1,11 @@
 import react, { useContext, useEffect, useReducer, useState } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 import jaguar from "../assets/jaguar.jpeg"
 import BookCard from "./BookCard"
 import { BookContext } from "../BookContext"
+import { useDispatch } from "react-redux"
+import { selectProduct } from "../redux/reducer/showcaseReducer"
+import { addProduct } from "../redux/reducer/shopReducer"
 
 // const Secret = () => <h1>This is a secret component</h1>;
 
@@ -23,6 +26,8 @@ const Books = () => {
   // const [checked, setChecked] = useState(true);
   const [data, setData] = useState(null)
   const { selected, setSelected } = useContext(BookContext)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   useEffect(() => {
     console.log("%c%s", "color: #00b300", checked)
@@ -50,22 +55,12 @@ const Books = () => {
     console.log("%c%s", "color: #1d5673", data)
   }, [data])
 
-  function checkData() {
-    console.log(data)
-  }
-
-  function checkSelected() {
-    console.log(selected)
-  }
-
   return (
     <section>
       <Outlet />
 
       <h1>Jaguar Bookstore</h1>
       <div className="bookShowcase">
-        <button onClick={checkData}>Check Data</button>
-        <button onClick={checkSelected}>Check Selected</button>
         <h4>
           Navigate through our best books selection using the navigation bar
           above or click a book below to read more about it
@@ -74,7 +69,31 @@ const Books = () => {
 
       <div className="bookDiv">
         <div className="bookList">
-          {data && data.map((book) => <BookCard key={book.id} book={book} />)}
+          {data &&
+            data.map((book) => (
+              <>
+                <div className="bookCard">
+                  <div className="bookCard__buttons">
+                    <div
+                      className="bookCard_select__buttons"
+                      onClick={() => {
+                        dispatch(selectProduct(book))
+                        navigate(`/books/${book.id}`)
+                      }}
+                    >
+                      Info
+                    </div>
+                    <div
+                      className="bookCard_add__buttons"
+                      onClick={() => dispatch(addProduct(book))}
+                    >
+                      Add
+                    </div>
+                  </div>
+                  <BookCard key={book.id} book={book} />
+                </div>
+              </>
+            ))}
         </div>
       </div>
     </section>

@@ -1,8 +1,10 @@
 import react from "react"
 import { Link } from "react-router-dom"
 import "./header.css"
+import { useSelector } from "react-redux"
 
 const Header = () => {
+  const cart = useSelector((state) => state.persistedReducer.product.value)
   return (
     <nav>
       <ul>
@@ -18,6 +20,13 @@ const Header = () => {
               </li>
             </ul>
           </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <Link to="/checkout" className="bigButton">
+            Your Cart ({cart.length})
+          </Link>
         </li>
       </ul>
     </nav>
